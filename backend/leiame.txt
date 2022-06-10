@@ -1,3 +1,0 @@
-TODO
-
-Criar solution c/ aplicação .net 6

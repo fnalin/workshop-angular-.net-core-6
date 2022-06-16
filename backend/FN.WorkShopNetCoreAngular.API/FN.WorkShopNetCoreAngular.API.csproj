@@ -17,4 +17,8 @@
       <Compile Remove="Controllers\WeatherForecastController.cs" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\FN.WorkShopNetCoreAngular.CrossCutting\FN.WorkShopNetCoreAngular.CrossCutting.csproj" />
+    </ItemGroup>
+
 </Project>

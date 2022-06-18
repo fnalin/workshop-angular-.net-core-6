@@ -11,4 +11,11 @@ public class Cliente :  Entity
     public Sexo Sexo { get; set; }
     public DateTime Nascimento { get; set; }
     public DateTime CriadoEm { get; set; } = DateTime.UtcNow;
+
+    public void Update(string nome, string sobrenome, DateTime nascimento)
+    {
+        Nome = nome;
+        Sobrenome = sobrenome;
+        Nascimento = nascimento;
+    }
 }

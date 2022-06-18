@@ -1,5 +1,6 @@
 using FN.WorkShopNetCoreAngular.Data.EF;
 using FN.WorkShopNetCoreAngular.Data.EF.Repositories;
+using FN.WorkShopNetCoreAngular.Domain.Contracts.Infra;
 using FN.WorkShopNetCoreAngular.Domain.Contracts.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,7 +16,7 @@ public static class Configuration
     private static void registerData(IServiceCollection services)
     {
         services.AddScoped<WorkShopNetCoreAngularDbContext>();
-
+        services.AddTransient<IUnitOfWork, UnitOfWork>();
         services.AddTransient<IClienteRepository, ClienteRepository>();
     }
 }

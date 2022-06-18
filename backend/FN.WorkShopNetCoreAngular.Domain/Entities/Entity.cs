@@ -1,6 +1,6 @@
 namespace FN.WorkShopNetCoreAngular.Domain.Entities;
 
-public class Entity
+public abstract class Entity
 {
-    
+   
 }

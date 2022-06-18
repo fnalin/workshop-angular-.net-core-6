@@ -7,7 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    // Impedir o BadRequest automático
+    .ConfigureApiBehaviorOptions(c=>c.SuppressModelStateInvalidFilter = true);
+
 builder.Services.RegisterServices();
 builder.Services.AddApiVersioning(o =>
 {

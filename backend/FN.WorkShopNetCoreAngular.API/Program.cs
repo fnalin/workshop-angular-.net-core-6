@@ -7,7 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers()
+builder.Services.AddControllers(option =>
+    {
+        option.ReturnHttpNotAcceptable = true;
+    })
+    .AddXmlDataContractSerializerFormatters()
     // Impedir o BadRequest automático
     .ConfigureApiBehaviorOptions(c=>c.SuppressModelStateInvalidFilter = true);
 

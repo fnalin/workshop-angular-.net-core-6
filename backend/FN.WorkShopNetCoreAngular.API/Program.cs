@@ -11,6 +11,7 @@ builder.Services.AddControllers(option =>
     {
         option.ReturnHttpNotAcceptable = true;
     })
+    .AddNewtonsoftJson() // para usr o HttpPatch
     .AddXmlDataContractSerializerFormatters()
     // Impedir o BadRequest automático
     .ConfigureApiBehaviorOptions(c=>c.SuppressModelStateInvalidFilter = true);
